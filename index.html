@@ -41,19 +41,30 @@
         white-space: nowrap;
     }
 
-    /* Main Content (3× taller) */
+    /* Main Content */
     .content {
-        min-height: 60vh; /* makes it visually ~3x larger */
+        min-height: 60vh;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
+        position: relative;
     }
 
     .coming {
         font-size: 56px;
         font-weight: 700;
         letter-spacing: 1px;
+        transform: translateY(-40px); /* subtle premium lift */
+    }
+
+    /* Divider */
+    .divider {
+        width: 90%;
+        max-width: 1200px;
+        height: 1px;
+        background: rgba(21, 27, 84, 0.15);
+        margin: 0 auto;
     }
 
     /* Footer */
@@ -71,23 +82,30 @@
         width: 100%;
     }
 
-    .footer-left {
+    .footer-left,
+    .footer-right {
         max-width: 45%;
     }
 
     .footer-right {
         text-align: right;
-        max-width: 45%;
     }
 
-    .footer-left p,
-    .footer-right p {
+    .footer-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
         margin: 6px 0;
         line-height: 1.5;
     }
 
-    .label {
-        font-weight: 700;
+    .footer-right .footer-item {
+        justify-content: flex-end;
+    }
+
+    .icon {
+        font-size: 16px;
+        line-height: 1.4;
     }
 
     .copyright {
@@ -105,11 +123,11 @@
 
         .coming {
             font-size: 40px;
+            transform: translateY(-20px);
         }
 
         .footer-inner {
             flex-direction: column;
-            text-align: left;
             gap: 15px;
         }
 
@@ -120,6 +138,10 @@
         .footer-left,
         .footer-right {
             max-width: 100%;
+        }
+
+        .footer-right .footer-item {
+            justify-content: flex-start;
         }
     }
 </style>
@@ -143,24 +165,32 @@
     </div>
 </div>
 
+<div class="divider"></div>
+
 <footer>
     <div class="footer-inner">
 
         <div class="footer-left">
-            <p class="label">Address:</p>
-            <p>
-                Office Space No. 109-FF, Gupta Tower-1,<br>
-                Commercial Complex, G-Block,<br>
-                Plot No. G-12, Vikaspuri, Delhi-110018
-            </p>
+            <div class="footer-item">
+                <span class="icon">📍</span>
+                <span>
+                    Office Space No. 109-FF, Gupta Tower-1,<br>
+                    Commercial Complex, G-Block,<br>
+                    Plot No. G-12, Vikaspuri, Delhi-110018
+                </span>
+            </div>
         </div>
 
         <div class="footer-right">
-            <p class="label">Phone:</p>
-            <p>+91 92988 56111</p>
+            <div class="footer-item">
+                <span class="icon">📞</span>
+                <span>+91 92988 56111</span>
+            </div>
 
-            <p class="label" style="margin-top:10px;">Email:</p>
-            <p>info@rivenciabiotech.com</p>
+            <div class="footer-item">
+                <span class="icon">✉️</span>
+                <span>info@rivenciabiotech.com</span>
+            </div>
         </div>
 
     </div>
