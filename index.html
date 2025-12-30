@@ -23,14 +23,14 @@
     /* Header */
     header {
         background: var(--primary);
-        padding: 20px 30px;
+        padding: 12px 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
     .logo img {
-        max-width: 350px;
+        max-width: 175px; /* 50% of previous */
     }
 
     .header-slogan {
@@ -44,7 +44,7 @@
 
     /* Main Content */
     .content {
-        flex: 1;
+        flex: 5; /* main area is 5x footer */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -52,29 +52,55 @@
     }
 
     .coming {
-        font-size: 48px; /* large & dominant */
+        font-size: 52px;
         font-weight: 700;
         letter-spacing: 1px;
     }
 
     /* Footer */
     footer {
+        flex: 1;
         background: var(--primary);
         color: #ffffff;
-        text-align: center;
-        padding: 25px 15px;
+        padding: 18px 30px;
         font-size: 14px;
-        line-height: 1.6;
     }
 
-    footer p {
-        margin: 8px 0;
+    .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1100px;
+        margin: 0 auto;
+        gap: 40px;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 50%;
+    }
+
+    .footer-left p,
+    .footer-right p {
+        margin: 6px 0;
+        line-height: 1.5;
+    }
+
+    .label {
+        font-weight: 700;
+    }
+
+    .copyright {
+        text-align: center;
+        margin-top: 14px;
+        font-size: 13px;
+        opacity: 0.9;
     }
 
     @media (max-width: 768px) {
         header {
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
         }
 
         .header-slogan {
@@ -82,12 +108,21 @@
             white-space: normal;
         }
 
-        .logo img {
-            max-width: 280px;
+        .content {
+            flex: 4;
         }
 
         .coming {
-            font-size: 36px;
+            font-size: 38px;
+        }
+
+        .footer-inner {
+            flex-direction: column;
+        }
+
+        .footer-left,
+        .footer-right {
+            width: 100%;
         }
     }
 </style>
@@ -112,22 +147,30 @@
 </div>
 
 <footer>
-    <p>
-        Office Space No. 109-FF, Gupta Tower-1, Commercial Complex, G-Block,<br>
-        Plot No. G-12, Vikaspuri, Delhi-110018
-    </p>
+    <div class="footer-inner">
 
-    <p>
-        +91 92988 56111
-    </p>
+        <div class="footer-left">
+            <p class="label">Address:</p>
+            <p>
+                Office Space No. 109-FF, Gupta Tower-1,<br>
+                Commercial Complex, G-Block,<br>
+                Plot No. G-12, Vikaspuri, Delhi-110018
+            </p>
+        </div>
 
-    <p>
-        info@rivenciabiotech.com
-    </p>
+        <div class="footer-right">
+            <p class="label">Phone:</p>
+            <p>+91 92988 56111</p>
 
-    <p style="margin-top:12px; font-size:13px;">
+            <p class="label" style="margin-top:10px;">Email:</p>
+            <p>info@rivenciabiotech.com</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
         © 2025 Rivencia Biotech Pvt. Ltd. All Rights Reserved.
-    </p>
+    </div>
 </footer>
 
 </body>
