@@ -3,81 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rivencia Biotech | Coming Soon</title>
+<title>Coming Soon | Rivencia Biotech</title>
 
 <style>
     :root {
-        --primary: rgb(21, 27, 84);
+        --midnight: rgb(21, 27, 84);
+        --light-text: #e9ebff;
+        --muted-text: #c7c9f1;
     }
 
     body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-        background: #f4f6fb;
-        color: #333;
+        background: linear-gradient(135deg, #0f143d, var(--midnight));
+        color: var(--light-text);
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
     }
 
     .container {
-        background: #ffffff;
-        max-width: 520px;
+        max-width: 560px;
         width: 90%;
-        padding: 40px 30px;
         text-align: center;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        padding: 40px 30px;
     }
 
     .logo {
-        background: var(--primary);
-        padding: 20px;
-        border-radius: 8px;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     .logo img {
-        max-width: 260px;
+        max-width: 280px;
     }
 
-    h1 {
-        color: var(--primary);
-        font-size: 32px;
-        margin-bottom: 10px;
-    }
-
-    .tagline {
-        font-size: 16px;
+    .slogan {
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 1.2;
         margin-bottom: 30px;
+        letter-spacing: 0.5px;
     }
 
     .coming {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 25px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        color: var(--muted-text);
     }
 
     .info {
-        text-align: left;
-        margin-top: 30px;
         font-size: 15px;
+        line-height: 1.6;
+        color: var(--muted-text);
     }
 
     .info p {
-        margin: 8px 0;
-    }
-
-    .label {
-        font-weight: bold;
-        color: var(--primary);
+        margin: 14px 0;
     }
 
     footer {
-        margin-top: 30px;
+        margin-top: 40px;
         font-size: 13px;
-        color: #666;
+        color: #aeb1ff;
+    }
+
+    @media (max-width: 480px) {
+        .slogan {
+            font-size: 32px;
+        }
     }
 </style>
 </head>
@@ -90,34 +86,33 @@
         <img src="Logo white no BG.png" alt="Rivencia Biotech Logo">
     </div>
 
-    <h1>Rivencia Biotech</h1>
-    <div class="tagline">
-        Vision of Your Eyes. Mission of Our Life.
+    <div class="slogan">
+        Perfect Vision.<br>
+        Our Mission.
     </div>
 
     <div class="coming">
-        🚧 Website Coming Soon
+        Website Coming Soon
     </div>
 
     <div class="info">
-        <p><span class="label">Address:</span><br>
-        Office Space No. 109-FF, Gupta Tower-1,<br>
-        Commercial Complex, G-Block,<br>
-        Plot No. G-12, Vikaspuri, Delhi-110018
+        <p>
+            Office Space No. 109-FF, Gupta Tower-1,<br>
+            Commercial Complex, G-Block,<br>
+            Plot No. G-12, Vikaspuri, Delhi-110018
         </p>
 
-        <p><span class="label">Phone:</span><br>
-        +91 92988 56111<br>
-        +91 97173 89717
+        <p>
+            +91 92988 56111
         </p>
 
-        <p><span class="label">Email:</span><br>
-        info@rivenciabiotech.com
+        <p>
+            info@rivenciabiotech.com
         </p>
     </div>
 
     <footer>
-        © 2025 Rivencia Biotech Pvt. Ltd. All Rights Reserved.
+        © 2025 Rivencia Biotech Pvt. Ltd.
     </footer>
 
 </div>
