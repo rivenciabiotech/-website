@@ -15,48 +15,46 @@
         font-family: Arial, Helvetica, sans-serif;
         background: #ffffff;
         color: var(--primary);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
 
     /* Header */
     header {
         background: var(--primary);
-        padding: 40px 20px;
-        text-align: center;
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    header img {
-        max-width: 350px; /* increased by 25% */
+    .logo img {
+        max-width: 350px;
+    }
+
+    .header-slogan {
+        flex: 1;
+        text-align: center;
+        color: #ffffff;
+        font-size: 29px;
+        font-weight: 700;
+        white-space: nowrap;
     }
 
     /* Main Content */
     .content {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 60px 20px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
     }
 
-    .slogan {
-        font-size: 32px; /* reduced by 20% */
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 25px;
-        white-space: nowrap; /* forces single line */
-    }
-
     .coming {
-        font-size: 20px;
-        margin-bottom: 40px;
-        font-weight: 500;
-    }
-
-    .info {
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-    .info p {
-        margin: 16px 0;
+        font-size: 48px; /* large & dominant */
+        font-weight: 700;
+        letter-spacing: 1px;
     }
 
     /* Footer */
@@ -64,14 +62,32 @@
         background: var(--primary);
         color: #ffffff;
         text-align: center;
-        padding: 18px 10px;
-        font-size: 13px;
+        padding: 25px 15px;
+        font-size: 14px;
+        line-height: 1.6;
     }
 
-    @media (max-width: 480px) {
-        .slogan {
-            font-size: 26px;
-            white-space: normal; /* allows wrap on very small screens */
+    footer p {
+        margin: 8px 0;
+    }
+
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .header-slogan {
+            font-size: 24px;
+            white-space: normal;
+        }
+
+        .logo img {
+            max-width: 280px;
+        }
+
+        .coming {
+            font-size: 36px;
         }
     }
 </style>
@@ -80,40 +96,38 @@
 <body>
 
 <header>
-    <img src="Logo white no BG.png" alt="Rivencia Biotech Logo">
+    <div class="logo">
+        <img src="Logo white no BG.png" alt="Rivencia Biotech Logo">
+    </div>
+
+    <div class="header-slogan">
+        Perfect Vision. Our Mission.
+    </div>
 </header>
 
 <div class="content">
-
-    <div class="slogan">
-        Perfect Vision. Our Mission.
-    </div>
-
     <div class="coming">
         Coming soon...
     </div>
-
-    <div class="info">
-        <p>
-            Office Space No. 109-FF, Gupta Tower-1,<br>
-            Commercial Complex, G-Block,<br>
-            Plot No. G-12, Vikaspuri, Delhi-110018
-        </p>
-
-        <p>
-            +91 92988 56111<br>
-            +91 97173 89717
-        </p>
-
-        <p>
-            info@rivenciabiotech.com
-        </p>
-    </div>
-
 </div>
 
 <footer>
-    © 2025 Rivencia Biotech Pvt. Ltd. All Rights Reserved.
+    <p>
+        Office Space No. 109-FF, Gupta Tower-1, Commercial Complex, G-Block,<br>
+        Plot No. G-12, Vikaspuri, Delhi-110018
+    </p>
+
+    <p>
+        +91 92988 56111
+    </p>
+
+    <p>
+        info@rivenciabiotech.com
+    </p>
+
+    <p style="margin-top:12px; font-size:13px;">
+        © 2025 Rivencia Biotech Pvt. Ltd. All Rights Reserved.
+    </p>
 </footer>
 
 </body>
