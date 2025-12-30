@@ -15,9 +15,9 @@
         font-family: Arial, Helvetica, sans-serif;
         background: #ffffff;
         color: var(--primary);
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
     }
 
     /* Header */
@@ -26,11 +26,10 @@
         padding: 12px 30px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
     }
 
     .logo img {
-        max-width: 175px; /* 50% of previous */
+        max-width: 175px;
     }
 
     .header-slogan {
@@ -42,9 +41,9 @@
         white-space: nowrap;
     }
 
-    /* Main Content */
+    /* Main Content (3× taller) */
     .content {
-        flex: 5; /* main area is 5x footer */
+        min-height: 60vh; /* makes it visually ~3x larger */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -52,17 +51,16 @@
     }
 
     .coming {
-        font-size: 52px;
+        font-size: 56px;
         font-weight: 700;
         letter-spacing: 1px;
     }
 
     /* Footer */
     footer {
-        flex: 1;
         background: var(--primary);
         color: #ffffff;
-        padding: 18px 30px;
+        padding: 22px 40px;
         font-size: 14px;
     }
 
@@ -70,14 +68,16 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        max-width: 1100px;
-        margin: 0 auto;
-        gap: 40px;
+        width: 100%;
     }
 
-    .footer-left,
+    .footer-left {
+        max-width: 45%;
+    }
+
     .footer-right {
-        width: 50%;
+        text-align: right;
+        max-width: 45%;
     }
 
     .footer-left p,
@@ -98,31 +98,28 @@
     }
 
     @media (max-width: 768px) {
-        header {
-            flex-direction: column;
-            gap: 10px;
-        }
-
         .header-slogan {
             font-size: 24px;
             white-space: normal;
         }
 
-        .content {
-            flex: 4;
-        }
-
         .coming {
-            font-size: 38px;
+            font-size: 40px;
         }
 
         .footer-inner {
             flex-direction: column;
+            text-align: left;
+            gap: 15px;
+        }
+
+        .footer-right {
+            text-align: left;
         }
 
         .footer-left,
         .footer-right {
-            width: 100%;
+            max-width: 100%;
         }
     }
 </style>
