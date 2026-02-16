@@ -20,7 +20,6 @@
         flex-direction: column;
     }
 
-    /* Header */
     header {
         background: var(--primary);
         padding: 12px 30px;
@@ -41,20 +40,17 @@
         white-space: nowrap;
     }
 
-    /* Main Content */
     .content {
         min-height: 60vh;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        position: relative;
     }
 
     .coming {
         font-size: 56px;
         font-weight: 700;
-        letter-spacing: 1px;
         opacity: 0;
         transform: translateY(20px);
         animation: fadeUp 1.2s ease forwards;
@@ -68,7 +64,6 @@
         }
     }
 
-    /* Divider */
     .divider {
         width: 90%;
         max-width: 1200px;
@@ -77,7 +72,6 @@
         margin: 0 auto;
     }
 
-    /* Footer */
     footer {
         background: var(--primary);
         color: #ffffff;
@@ -89,7 +83,6 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        width: 100%;
     }
 
     .footer-left,
@@ -114,8 +107,11 @@
     }
 
     .icon {
-        font-size: 16px;
-        line-height: 1.4;
+        width: 16px;
+        height: 16px;
+        fill: white;
+        margin-top: 2px;
+        flex-shrink: 0;
     }
 
     .footer-link {
@@ -125,6 +121,16 @@
 
     .footer-link:hover {
         text-decoration: underline;
+    }
+
+    .contact-text {
+        font-size: 13px;
+        opacity: 0.9;
+    }
+
+    .contact-name {
+        font-size: 15px;
+        font-weight: 600;
     }
 
     .copyright {
@@ -142,7 +148,6 @@
 
         .coming {
             font-size: 40px;
-            animation-delay: 0.2s;
         }
 
         .footer-inner {
@@ -172,16 +177,11 @@
     <div class="logo">
         <img src="Logo white no BG.png" alt="Rivencia Biotech Logo">
     </div>
-
-    <div class="header-slogan">
-        Perfect Vision. Our Mission.
-    </div>
+    <div class="header-slogan">Perfect Vision. Our Mission.</div>
 </header>
 
 <div class="content">
-    <div class="coming">
-        Coming soon...
-    </div>
+    <div class="coming">Coming soon...</div>
 </div>
 
 <div class="divider"></div>
@@ -189,13 +189,12 @@
 <footer>
     <div class="footer-inner">
 
+        <!-- Address -->
         <div class="footer-left">
             <div class="footer-item">
-                <!-- Location Icon -->
-                <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/>
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2Z"/>
                 </svg>
-
                 <span>
                     Office Space No. 109-FF, Gupta Tower-1,<br>
                     Commercial Complex, G-Block,<br>
@@ -204,28 +203,34 @@
             </div>
         </div>
 
+        <!-- Contact -->
         <div class="footer-right">
-            <div class="footer-item">
-                <!-- Phone Icon -->
-                <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
-                </svg>
 
-                <a class="footer-link" href="tel:+919996753399">
-                    +91 999-675-3399
-                </a>
+            <div class="footer-item" style="flex-direction: column; align-items: flex-end; gap: 4px;">
+                <span class="contact-text">For product-related queries, contact</span>
+                <span class="contact-name">Mr. Rivansh</span>
+
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5V20C10.61 21 3 13.39 3 4H7.5"/>
+                    </svg>
+
+                    <a class="footer-link" href="tel:+919996753399">
+                        +91 999-675-3399
+                    </a>
+                </div>
             </div>
 
             <div class="footer-item">
-                <!-- Email Icon -->
-                <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M20 4H4V18H20V4ZM12 13L4 8V6L12 11L20 6V8L12 13Z"/>
                 </svg>
 
                 <a class="footer-link" href="mailto:info@rivenciabiotech.com">
                     info@rivenciabiotech.com
                 </a>
             </div>
+
         </div>
 
     </div>
@@ -237,6 +242,8 @@
 
 </body>
 </html>
+
+
 
 
 
