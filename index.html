@@ -4,192 +4,353 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rivencia Biotech</title>
-<meta name="description" content="Rivencia Biotech Private Limited is a reliable pharmaceutical company based in Delhi providing high-quality healthcare and ophthalmic products.">
 
-<meta property="og:title" content="Rivencia Biotech Private Limited">
-
-<meta property="og:description" content="Reliable pharmaceutical company in Delhi offering quality ophthalmic and healthcare products.">
-
-<meta property="og:image" content="https://rivenciabiotech.com/logo.png">
-
-<meta property="og:url" content="https://rivenciabiotech.com">
 <style>
-    :root {
-        --primary: rgb(21, 27, 84);
-    }
+:root {
+    --primary: rgb(21, 27, 84);
+    --light-bg: #f4f6fb;
+}
 
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #ffffff;
-        color: var(--primary);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #333;
+}
 
-    /* Header */
-    header {
-        background: var(--primary);
-        padding: 12px 30px;
-        display: flex;
-        align-items: center;
-    }
+/* Navbar */
+.navbar {
+    background: var(--primary);
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    .logo img {
-        max-width: 175px;
-    }
+.navbar img {
+    height: 65px;
+}
 
-    .header-slogan {
-        flex: 1;
-        text-align: center;
-        color: #ffffff;
-        font-size: 29px;
-        font-weight: 700;
-        white-space: nowrap;
-    }
+.navbar a {
+    color: #fff;
+    margin-left: 22px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+}
 
-    /* Main Content */
-    .content {
-        min-height: 60vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
+/* Hero */
+.hero {
+    background: var(--light-bg);
+    padding: 100px 20px 60px;
+    text-align: center;
+}
 
-    .coming {
-        font-size: 56px;
-        font-weight: 700;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeUp 1.2s ease forwards;
-        animation-delay: 0.4s;
-    }
+.hero h1 {
+    color: var(--primary);
+    font-size: 54px;
+}
 
-    @keyframes fadeUp {
-        to {
-            opacity: 1;
-            transform: translateY(-40px);
-        }
-    }
+.hero p {
+    font-size: 21px;
+    max-width: 800px;
+    margin: auto;
+}
 
-    /* Divider */
-    .divider {
-        width: 90%;
-        max-width: 1200px;
-        height: 1px;
-        background: rgba(21, 27, 84, 0.15);
-        margin: 0 auto;
-    }
+/* NEW: Image styling */
+.hero img {
+    margin-top: 40px;
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
 
-    /* Footer */
-    footer {
-        background: var(--primary);
-        color: #ffffff;
-        padding: 22px 40px;
-        font-size: 14px;
-    }
+/* Section titles */
+h2.section-title {
+    text-align: center;
+    color: var(--primary);
+    margin-top: 70px;
+    font-size: 32px;
+}
 
+.content {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 16px;
+}
+
+/* Accordion */
+details.product,
+.update-box {
+    border: 1px solid #ddd;
+    border-left: 6px solid var(--primary);
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 14px 18px;
+    background: #fff;
+}
+
+details.product summary {
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+details.product summary::-webkit-details-marker {
+    display: none;
+}
+
+.summary-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.arrow {
+    font-size: 14px;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+details[open] .arrow {
+    transform: rotate(180deg);
+}
+
+.salt {
+    font-size: 14px;
+    font-weight: normal;
+    color: rgba(21, 27, 84, 0.75);
+}
+
+.badge {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Soft animation */
+.product-info {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+details[open] .product-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Testimonials */
+.testimonials {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 28px;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.testimonial {
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: #ffffff;
+    padding: 22px 40px;
+    font-size: 14px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.footer-left,
+.footer-right {
+    max-width: 45%;
+    text-align: left;
+}
+
+.footer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    fill: white;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.contact-text {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.contact-name {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.contact-role {
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
     .footer-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 100%;
+        flex-direction: column;
+        gap: 15px;
     }
 
     .footer-left,
     .footer-right {
-        max-width: 45%;
-        text-align: left;
+        max-width: 100%;
     }
-
-    .footer-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-        margin: 8px 0;
-        line-height: 1.5;
-    }
-
-    .icon {
-        width: 16px;
-        height: 16px;
-        fill: white;
-        margin-top: 3px;
-        flex-shrink: 0;
-    }
-
-    .footer-link {
-        color: #ffffff;
-        text-decoration: none;
-    }
-
-    .footer-link:hover {
-        text-decoration: underline;
-    }
-
-    .contact-text {
-        font-size: 13px;
-        opacity: 0.9;
-    }
-
-    .contact-name {
-        font-size: 15px;
-        font-weight: 600;
-    }
-
-    .contact-role {
-        font-size: 13px;
-        opacity: 0.85;
-    }
-
-    .copyright {
-        text-align: center;
-        margin-top: 14px;
-        font-size: 13px;
-        opacity: 0.9;
-    }
-
-    @media (max-width: 768px) {
-        .header-slogan {
-            font-size: 24px;
-            white-space: normal;
-        }
-
-        .coming {
-            font-size: 40px;
-        }
-
-        .footer-inner {
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .footer-left,
-        .footer-right {
-            max-width: 100%;
-        }
-    }
+}
 </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">
-        <img src="Logo white no BG.png" alt="Rivencia Biotech Logo">
+<!-- Navbar -->
+<div class="navbar">
+    <img src="Logo white no BG.png" alt="Rivencia Biotech Logo">
+    <div>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
     </div>
-    <div class="header-slogan">Perfect Vision. Our Mission.</div>
-</header>
-
-<div class="content">
-    <div class="coming">Coming soon...</div>
+</div>
+</div>
+    
+<div class="hero">
+ <!-- ✅ YOUR IMAGE ADDED HERE -->
+    <img src="products.jpg" alt="Rivencia Biotech Product Range">
+<h1>Advancing Eye Care Excellence</h1>
+    <p>Trusted ophthalmic and specialty pharmaceutical formulations designed for modern clinical needs.</p>
 </div>
 
-<div class="divider"></div>
+<!-- Hero -->
+<!-- Products -->
+<h2 class="section-title" id="products">Our Product Portfolio</h2>
+<div class="content">
 
-<footer>
+<h3 style="color:var(--primary)">Anti-Infective & Combination Therapy</h3>
+
+<details class="product"><summary><span class="summary-left">Rivmelo <span class="salt">(Moxifloxacin 0.5%)</span><span class="badge">BAK-Free</span></span><span class="arrow">▼</span></summary><div class="product-info">Broad-spectrum fluoroquinolone antibiotic indicated for bacterial conjunctivitis and other susceptible ocular infections.</div></details>
+
+<details class="product"><summary><span class="summary-left">Rivmelo-LP <span class="salt">(Moxifloxacin 0.5% + Loteprednol Etabonate 0.5%)</span><span class="badge">BAK-Free</span></span><span class="arrow">▼</span></summary><div class="product-info">Antibiotic with soft steroid providing infection control along with controlled anti-inflammatory action.</div></details>
+
+<details class="product"><summary><span class="summary-left">Rivmelo-B <span class="salt">(Moxifloxacin 0.5% + Bromfenac 0.09%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Combination therapy targeting bacterial infection while reducing post-operative pain and inflammation.</div></details>
+
+<details class="product"><summary><span class="summary-left">Rivmelo-KT <span class="salt">(Moxifloxacin 0.5% + Ketorolac Tromethamine 0.4%)</span><span class="badge">BAK-Free</span></span><span class="arrow">▼</span></summary><div class="product-info">Antibiotic and NSAID combination for painful inflammatory ocular conditions requiring antimicrobial coverage.</div></details>
+
+<details class="product"><summary><span class="summary-left">Gofitob <span class="salt">(Tobramycin 0.3% + Fluorometholone 0.1%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Indicated for steroid-responsive inflammatory eye conditions with concurrent or potential bacterial infection.</div></details>
+
+<h3 style="color:var(--primary); margin-top:40px;">Anti-Inflammatory & Post-Operative Care</h3>
+
+<details class="product"><summary><span class="summary-left">Rivbrom <span class="salt">(Bromfenac 0.09%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Non-steroidal anti-inflammatory drug used for managing ocular pain and inflammation after surgery.</div></details>
+
+<details class="product"><summary><span class="summary-left">Revunaf <span class="salt">(Nepafenac 0.1%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Prodrug NSAID providing targeted intraocular anti-inflammatory effect following cataract surgery.</div></details>
+
+<details class="product"><summary><span class="summary-left">Rivdiff <span class="salt">(Difluprednate 0.05%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Potent corticosteroid indicated for severe ocular inflammation and post-operative inflammatory conditions.</div></details>
+
+<h3 style="color:var(--primary); margin-top:40px;">Dry Eye & Lubrication Therapy</h3>
+
+<details class="product"><summary><span class="summary-left">Rivlu <span class="salt">(Carboxymethylcellulose Sodium 0.5%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Lubricating eye drops providing symptomatic relief in mild to moderate dry eye syndrome.</div></details>
+
+<details class="product"><summary><span class="summary-left">Rivlu Gel <span class="salt">(Carboxymethylcellulose Sodium 1.0%)</span></span><span class="arrow">▼</span></summary><div class="product-info">High-viscosity lubricant offering prolonged ocular surface protection in persistent dryness.</div></details>
+
+<details class="product"><summary><span class="summary-left">Poth <span class="salt">(PEG 400 0.4% + Propylene Glycol 0.3%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Dual-polymer tear substitute improving tear film stability and ocular surface hydration.</div></details>
+
+<details class="product"><summary><span class="summary-left">Hylunera <span class="salt">(Sodium Hyaluronate 0.1%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Viscoelastic lubricant supporting epithelial healing and sustained moisture retention.</div></details>
+
+<details class="product"><summary><span class="summary-left">Hylunera Plus <span class="salt">(Sodium Hyaluronate 0.18%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Enhanced hyaluronic acid concentration for long-lasting lubrication and tear film stability.</div></details>
+
+<h3 style="color:var(--primary); margin-top:40px;">Anti-Allergic, Glaucoma & Diagnostic Range</h3>
+
+<details class="product"><summary><span class="summary-left">Rivazoline <span class="salt">(Naphazoline 0.1% + Chlorpheniramine 0.01%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Provides rapid symptomatic relief from allergic redness, itching, and conjunctival congestion.</div></details>
+
+<details class="product"><summary><span class="summary-left">Olozara <span class="salt">(Olopatadine 0.1%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Dual-action antihistamine and mast-cell stabilizer used in allergic conjunctivitis.</div></details>
+
+<details class="product"><summary><span class="summary-left">Olozara Plus <span class="salt">(Olopatadine 0.2%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Once-daily anti-allergic therapy ensuring improved patient compliance and sustained symptom control.</div></details>
+
+<details class="product"><summary><span class="summary-left">Tog <span class="salt">(Timolol 0.5%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Beta-adrenergic blocker indicated for reduction of elevated intraocular pressure in glaucoma.</div></details>
+
+<details class="product"><summary><span class="summary-left">Ropiriv <span class="salt">(Tropicamide 0.8% + Phenylephrine 5%)</span></span><span class="arrow">▼</span></summary><div class="product-info">Mydriatic combination commonly used for diagnostic examinations and pre-operative pupil dilation.</div></details>
+
+</div>
+
+<!-- About -->
+<h2 class="section-title" id="about">About Rivencia Biotech</h2>
+<div class="content">
+<p>
+Rivencia Biotech is a research-driven pharmaceutical company with a strong focus
+on ophthalmic care. We are committed to quality products, ethical business
+practices, and long-term partnerships with healthcare professionals.
+</p>
+</div>
+
+<!-- Latest Updates -->
+<h2 class="section-title" id="news">Latest Updates</h2>
+<div class="content">
+<div class="update-box">Launch of advanced ophthalmic formulations across key therapeutic segments</div>
+<div class="update-box">Expansion of distributor network across multiple Indian states</div>
+<div class="update-box">Strengthening doctor engagement and scientific promotion programs</div>
+</div>
+
+<!-- Testimonials -->
+<h2 class="section-title">Testimonials</h2>
+<div class="testimonials">
+<div class="testimonial">“Excellent product quality and consistent clinical performance.” – Ophthalmologist</div>
+<div class="testimonial">“Professional support, ethical pricing, and dependable supply chain.” – Channel Partner</div>
+</div>
+
+<!-- Footer -->
+<footer id="contact">
     <div class="footer-inner">
 
         <!-- Address -->
@@ -241,11 +402,16 @@
     </div>
 </footer>
 
+<script>
+const items = document.querySelectorAll("details.product");
+items.forEach(d => {
+    d.addEventListener("toggle", () => {
+        if (d.open) {
+            items.forEach(o => o !== d && (o.open = false));
+        }
+    });
+});
+</script>
+
 </body>
 </html>
-
-
-
-
-
-
